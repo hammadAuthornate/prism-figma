@@ -28,7 +28,7 @@ export default function Navbar() {
           </button>
         ))}
       </div>
-      <button className="rounded-3xl bg-gray-950 border border-white/70 px-2 py-1 my-4">
+      <button className="rounded-3xl bg-gray-950 border border-white/70 px-4 py-2 my-4">
         Connect Button
       </button>
     </div>

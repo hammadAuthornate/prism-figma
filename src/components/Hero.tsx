@@ -1,11 +1,17 @@
 export default function Hero() {
   return (
-    <>
+    <div className="bg-[url('/bgfull1.png')] bg-cover bg-bottom">
       <div className="flex justify-center my-60">
         <div className="flex flex-col md:flex-row gap-8 max-w-6xl">
-          <div className="w-1/2">Image</div>
-          <div className="flex flex-col gap-4 w-1/2">
-            <div>Prism NFT Collection</div>
+          <div className="w-full md:w-1/2 border p-6 border-white rounded-3xl flex justify-center items-center">
+            <img
+              src="/hero_image.png"
+              alt="image"
+              className="border border-white/40 rounded-3xl w-full"
+            />
+          </div>
+          <div className="flex flex-col w-full md:w-1/2 justify-between p-4">
+            <div className="font-extrabold text-4xl">Prism NFT Collection</div>
             <div>
               A Collection of 10,000 Undead NFTs Minted On The Ethereum
               Blockchain. Each Unique Deadfella Is Randomly Generated From A
@@ -26,32 +32,25 @@ export default function Hero() {
                 <div className="text-xl">0.087121 DUEL</div>
                 <div className="text-sm">$0.002398</div>
               </div>
-              <div className="flex flex-row rounded-full items-center gap-4 bg-gray-400 px-1">
-                <div className="size-8 rounded-full bg-gray-600 flex items-center justify-center text-white text-3xl">
+              <div className="flex flex-row rounded-full items-center gap-4 bg-gray-900 px-1 h-10">
+                <button className="size-8 rounded-full bg-gray-600 flex items-center justify-center text-white text-2xl">
                   +
-                </div>
-                <div className="text-white text-4xl">0</div>
-                <div className="size-8 rounded-full bg-gray-600 flex items-center justify-center text-white text-3xl">
+                </button>
+                <div className="text-white text-2xl">0</div>
+                <button className="size-8 rounded-full bg-gray-600 flex items-center justify-center text-white text-2xl">
                   -
-                </div>
+                </button>
               </div>
             </div>
-            <div className="bg-pink-600 w-full rounded-full text-center py-4">
+            <button className="bg-pink-600 w-full rounded-full text-center py-4">
               MINT
-            </div>
+            </button>
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center gap-16 mb-80">
+      <div className="flex justify-center items-center pb-12">
         <div className="text-6xl font-extrabold">GameGPT Avatar Collection</div>
-        <div className="max-w-5xl text-center text-2xl">
-          Introducing the GameGPT Genesis NFT Collection. Our 6000 NFT avatars
-          all play their part in charing the story of a futuristic post-Earth
-          world where space exploration and the benevolent (or malevolent) use
-          of AI shape the future of humanity. Each of our 6000 NFTs will belong
-          to one of out three factions (2000 NFTs per faction)
-        </div>
       </div>
-    </>
+    </div>
   );
 }

@@ -1,14 +1,25 @@
 export default function Footer() {
+  const footerLinks = [
+    { name: "TERMS OF SERVICE", link: "/terms" },
+    { name: "PRIVACY POLICY", link: "/policy" },
+    { name: "DISCORD", link: "/discord" },
+    { name: "SUPPORT", link: "/support" },
+    { name: "CAREERS", link: "/careers" },
+  ];
   return (
     <div className="bg-black py-20 flex justify-center">
       <div className="flex flex-col gap-8">
-        <div className="flex justify-center">Logo</div>
+        <div className="flex justify-center">
+          <button>
+            <img src="/logo.png" alt="logo" />
+          </button>
+        </div>
         <div className="flex flex-wrap justify-center items-center divide-x">
-          <div className="px-4">TERMS OF SERVICE</div>
-          <div className="px-4">PRIVACY POLICY</div>
-          <div className="px-4">DISCORD</div>
-          <div className="px-4">SUPPORT</div>
-          <div className="px-4">CAREERS</div>
+          {footerLinks?.map((item, index) => (
+            <button key={index} className="px-4">
+              {item?.name}
+            </button>
+          ))}
         </div>
         <div className="text-center max-w-6xl">
           © 2024 Prism is not endorsed by Riot Games, nor does it reflect the
